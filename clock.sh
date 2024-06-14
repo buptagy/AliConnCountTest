@@ -7,7 +7,7 @@ current_time=$(date +%s)
 start_time=$((current_time + 60))
 
 # 循环调度任务，每隔两分钟执行一次
-for i in {0..2}; do
+for i in {0..0}; do
     # 计算每次执行的时间
     exec_time=$((start_time + 30 * i))
     
@@ -15,7 +15,7 @@ for i in {0..2}; do
     exec_time_readable=$(date -d @$exec_time +%H:%M)
     
     # 调度任务
-    echo "sh /root/AliConnCountTest/start.sh" | at $exec_time_readable
+    echo "sh /root/AliConnCountTest/start.sh 7" | at $exec_time_readable
 done
 
 # 查看已提交的任务
