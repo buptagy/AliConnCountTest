@@ -15,7 +15,7 @@ for i in {0..0}; do
     exec_time_readable=$(date -d @$exec_time +%H:%M)
     
     # 调度任务
-    echo "sh /root/AliConnCountTest/start.sh 7" | at $exec_time_readable
+    echo "sh /root/AliConnCountTest/start.sh 14" | at $exec_time_readable
 done
 
 # 查看已提交的任务
